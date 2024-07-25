@@ -32,9 +32,11 @@ dependencies = ["tzfpy ~= 0.15"]
 
 [project.optional-dependencies]
 pytz = ["tzfpy[pytz] ~= 0.15"]
+docs = ["sphinx-rtd-theme >= 1.2.0"]
 
 [project.urls]
 Source = "https://github.com/dmayo3/geotz"
+Docs = "http://geotz.readthedocs.io/"
 
 [build-system]
 build-backend = "setuptools.build_meta"

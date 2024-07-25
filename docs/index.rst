@@ -1,6 +1,8 @@
 geotz v0.0.1-alpha
 ==================
 
+`GitHub repository <https://github.com/dmayo3/geotz>`_
+
 This is a simple, lightweight library designed for fast and easy lookup
 of time zones based on country code and postal code or postal code prefix.
 

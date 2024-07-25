@@ -1,6 +1,8 @@
 GeoTZ v0.0.1-alpha
 ------------------
 
+Docs: https://geotz.readthedocs.io/
+
 This is a small library for looking up the timezone for a given country code
 and postal code / postal code prefix.
 

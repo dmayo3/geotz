@@ -26,9 +26,9 @@ jobs:
         with:
           password: ${{ secrets.TEST_PYPI_API_TOKEN }}
           repository_url: https://test.pypi.org/legacy/
+
   build-and-upload-to-pypi:
     runs-on: ubuntu-latest
-    needs: ["build-and-upload-to-testpypi"]
     environment:
       name: pypi
       url: https://pypi.org/p/geotz

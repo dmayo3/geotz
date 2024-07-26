@@ -11,12 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          lfs: true
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: "3.9"
       - name: Install Tox
         run: python -m pip install tox
+      - name: Check LFS Files
+        run: |
+          git lfs ls-files
+          git lfs status
       - name: Check file content
         run: |
           head -n 10 geotz/data/geonames_all_countries_sorted.tsv | hexdump -c

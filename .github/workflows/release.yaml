@@ -13,12 +13,16 @@ jobs:
       url: https://test.pypi.org/p/geotz
     steps:
       - uses: actions/checkout@v2
+        with:
+          lfs: true
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: "3.10"
-      - name: Install pypa/build
-        run: python -m pip install build
+      - name: Install build tools
+        run: python -m pip install tox build
+      - name: Run Tox
+        run: tox
       - name: Build source and wheel distribution
         run: python -m build --sdist --wheel --outdir dist/
       - name: Publish distribution to Test PyPI
@@ -34,12 +38,16 @@ jobs:
       url: https://pypi.org/p/geotz
     steps:
       - uses: actions/checkout@v2
+        with:
+          lfs: true
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: "3.10"
-      - name: Install pypa/build
-        run: python -m pip install build
+      - name: Install build tools
+        run: python -m pip install tox build
+      - name: Run Tox
+        run: tox
       - name: Build source and wheel distribution
         run: python -m build --sdist --wheel --outdir dist/
       - name: Publish distribution to PyPI

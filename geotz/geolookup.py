@@ -101,10 +101,7 @@ class PostalCodeLookup:
 
                 parts = line.decode().split("\t")
                 current_key = tuple(parts[:2])
-                try:
-                    current_country, current_postcode = current_key
-                except ValueError as err:
-                    raise ValueError(f"Unexpected line format: {line}") from err
+                current_country, current_postcode = current_key
                 target_country, target_postcode = target_key
 
                 if current_key < target_key:

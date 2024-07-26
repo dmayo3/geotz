@@ -1,6 +1,6 @@
 [project]
 name = "geotz"
-version = "0.0.1-alpha"
+version = "0.0.2-alpha"
 
 description = "Simple library for offline lookup of the timezone for a location."
 
@@ -49,7 +49,7 @@ include-package-data = true
 "geotz.data" = ["*.tsv"]
 
 [tool.bumpver]
-current_version = "0.0.1-alpha"
+current_version = "0.0.2-alpha"
 version_pattern = "MAJOR.MINOR.PATCH[-TAG]"
 commit_message = "Bump version {old_version} -> {new_version}"
 commit = true

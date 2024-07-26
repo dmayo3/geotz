@@ -59,4 +59,5 @@ push = false
 [tool.bumpver.file_patterns]
 "pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
 "geotz/__init__.py" = ["{version}"]
+"docs/index.rst" = ["geotz v{version}"]
 "README.rst" = ["{version}"]

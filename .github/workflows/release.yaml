@@ -1,8 +1,7 @@
 name: Python Package Release to TestPyPI then PyPI
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+
 jobs:
   build-and-upload-to-testpypi:
     runs-on: ubuntu-latest

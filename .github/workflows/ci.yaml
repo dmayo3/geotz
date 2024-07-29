@@ -18,9 +18,30 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install Tox
+      - name: Install tox
         run: python -m pip install tox
       - name: Extract data
         run: tox -e extract_data
       - name: Run Tox
         run: tox
+  dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+      - name: Install build tools
+        run: python -m pip install tox build
+      - name: Extract data
+        run: tox -e extract_data
+      - name: Build source and wheel distribution
+        run: python -m build --sdist --wheel --outdir dist/
+      - name: Validate wheel distribution contains extracted data
+        run: python -m zipfile --list dist/*.whl | grep --extended-regexp --silent '.tsv\s'
+      - name: Upload distribution artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist

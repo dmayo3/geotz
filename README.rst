@@ -37,3 +37,9 @@ To run the build, there's the GitHub actions workflows as well as the option to 
 
 For running the build locally, use `pip install tox` and the run `tox` in the repository base
 directory (or `tox -p` to run the build in parallel).
+
+1. Ensure you have `tox` installed e.g. by running `pip install tox`
+
+2. Extract data `tox -e extract_data`
+
+3. Run the build: `tox`

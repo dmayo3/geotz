@@ -1,6 +1,6 @@
 [project]
 name = "geotz"
-version = "0.0.2-alpha"
+version = "0.0.2a0"
 
 description = "Simple library for offline lookup of the timezone for a location."
 
@@ -52,8 +52,8 @@ include-package-data = true
 exclude = ["docs*", "tests*", "*.gz"]
 
 [tool.bumpver]
-current_version = "0.0.2-alpha"
-version_pattern = "MAJOR.MINOR.PATCH[-TAG]"
+current_version = "0.0.2a0"
+version_pattern = "MAJOR.MINOR.PATCH[PYTAGNUM]"
 commit_message = "Bump version {old_version} -> {new_version}"
 commit = true
 tag = true

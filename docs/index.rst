@@ -1,5 +1,5 @@
-geotz v0.0.2-alpha
-==================
+geotz v0.0.2a0
+==============
 
 `GitHub repository <https://github.com/dmayo3/geotz>`_
 

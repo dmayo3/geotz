@@ -1,5 +1,5 @@
-GeoTZ v0.0.2-alpha
-------------------
+GeoTZ v0.0.2a0
+--------------
 
 Docs: https://geotz.readthedocs.io/
 

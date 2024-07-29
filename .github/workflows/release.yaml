@@ -3,7 +3,8 @@ on:
   workflow_dispatch:
   push:
     tags:
-      - '[0-9]+\.[0-9]+\.[0-9]+([a-z]+[0-9]+)?'
+      - "0.*"
+      - "1.*"
 
 jobs:
   build:
@@ -38,19 +39,30 @@ jobs:
         run: tox -e extract_data
       - name: Build source and wheel distribution
         run: python -m build --sdist --wheel --outdir dist/
-      - name: Validate wheel distribution contains extracted data
-        run: python -m zipfile --list dist/*.whl | grep --extended-regexp --silent '.tsv\s'
       - name: Upload distribution artifact
         uses: actions/upload-artifact@v4
         with:
           name: dist
           path: dist
 
+  verify-dist:
+    runs-on: ubuntu-latest
+    needs: dist
+    steps:
+      - name: Download dist artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+      - name: Verify dist files exist
+        run: ls dist/*
+      - name: Validate wheel distribution contains extracted data
+        run: python -m zipfile --list dist/*.whl | grep --extended-regexp --silent '.tsv\s'
+
   upload-to-testpypi:
     runs-on: ubuntu-latest
     needs:
       - build
-      - dist
+      - verify-dist
     environment:
       name: testpypi
       url: https://test.pypi.org/p/geotz
@@ -69,7 +81,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - build
-      - dist
+      - verify-dist
     environment:
       name: pypi
       url: https://pypi.org/p/geotz

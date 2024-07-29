@@ -1,7 +1,7 @@
 from .tzlookup import lookup
 
 
-__version__ = "0.0.2a1"
+__version__ = "0.0.2a2"
 
 
 SUPPORTED_COUNTRY_CODES = [

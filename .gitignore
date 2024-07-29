@@ -4,3 +4,4 @@ build
 __pycache__
 *.egg-info
 docs/generated
+geotz/data/geonames_all_countries_sorted.tsv

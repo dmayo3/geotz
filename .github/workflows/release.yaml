@@ -13,8 +13,6 @@ jobs:
       url: https://test.pypi.org/p/geotz
     steps:
       - uses: actions/checkout@v2
-        with:
-          lfs: true
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -38,8 +36,6 @@ jobs:
       url: https://pypi.org/p/geotz
     steps:
       - uses: actions/checkout@v2
-        with:
-          lfs: true
       - name: Set up Python
         uses: actions/setup-python@v2
         with:

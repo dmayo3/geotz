@@ -29,3 +29,11 @@ Motivation
 5. I tried to keep the extra dependencies to a minimum.
 
 6. Data is loaded from disk on demand, so as to not use unnecessary memory.
+
+Development
+-----------
+
+To run the build, there's the GitHub actions workflows as well as the option to run locally.
+
+For running the build locally, use `pip install tox` and the run `tox` in the repository base
+directory (or `tox -p` to run the build in parallel).

@@ -1,4 +1,4 @@
-GeoTZ v0.0.2a3
+GeoTZ v0.0.2a4
 --------------
 
 Docs: https://geotz.readthedocs.io/

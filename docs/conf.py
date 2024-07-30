@@ -1,4 +1,7 @@
 import os
+import gzip
+from importlib import resources
+
 
 project = "geotz"
 
@@ -24,8 +27,17 @@ doctest_global_setup = """
 import geotz
 """
 
-data_file = "../geotz/data/geonames_all_countries_sorted.tsv"
-if not os.path.exists(data_file):
-    raise ValueError(
-        f"ERROR: need to ensure {data_file} is extracted by running `tox -e extract_data`",
+# Extract data if necessary
+data_file_name = "geonames_all_countries_sorted.tsv"
+gz_path = os.path.abspath(
+    os.path.join(
+        os.path.dirname(__file__), "..", "geotz", "data", f"{data_file_name}.gz"
     )
+)
+
+with resources.path("geotz.data", data_file_name) as data_path:
+    if not os.path.exists(data_path):
+        print(f"Decompressing {gz_path} to {data_path}...")
+        with gzip.open(gz_path, "rb") as gzfile, open(data_path, "wb") as dest_file:
+            dest_file.writelines(gzfile)
+        print("Decompression complete.")

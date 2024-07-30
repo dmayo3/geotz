@@ -53,6 +53,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist
+          path: dist
       - name: Verify dist files exist
         run: ls dist/*
       - name: Validate wheel distribution contains extracted data
@@ -71,6 +72,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist
+          path: dist
       - name: Publish distribution to Test PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
@@ -90,6 +92,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dist
+          path: dist
       - name: Publish distribution to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:

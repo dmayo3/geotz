@@ -24,22 +24,8 @@ jobs:
         run: tox -e extract_data
       - name: Run Tox
         run: tox
-
-  coverage:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.9"
-      - name: Install tox
-        run: python -m pip install tox
-      - name: Extract data
-        run: tox -e extract_data
-      - name: Run tests again with coverage
-        run: tox -e py39 -- -cov
       - name: Upload coverage to Codecov
+        if: ${{ matrix.python-version == "3.9" }}
         uses: codecov/codecov-action@v4
         with:
           verbose: true

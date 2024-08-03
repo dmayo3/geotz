@@ -1,4 +1,4 @@
-name: Python Package Release to TestPyPI then PyPI
+name: Release to PyPI / TestPyPi
 on:
   workflow_dispatch:
   push:

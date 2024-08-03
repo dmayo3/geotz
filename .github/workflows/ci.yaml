@@ -24,6 +24,13 @@ jobs:
         run: tox -e extract_data
       - name: Run Tox
         run: tox
+      - name: Upload coverage to Codecov
+        if: ${{ matrix.python-version == '3.9' }}
+        uses: codecov/codecov-action@v4
+        with:
+          verbose: true
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   dist:
     runs-on: ubuntu-latest

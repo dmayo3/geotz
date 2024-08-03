@@ -38,7 +38,7 @@ jobs:
       - name: Extract data
         run: tox -e extract_data
       - name: Run tests again with coverage
-        run: tox -e testenv -- -cov
+        run: tox -e py39 -- -cov
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:

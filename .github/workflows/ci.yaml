@@ -25,7 +25,7 @@ jobs:
       - name: Run Tox
         run: tox
       - name: Upload coverage to Codecov
-        if: ${{ matrix.python-version == "3.9" }}
+        if: ${{ matrix.python-version == '3.9' }}
         uses: codecov/codecov-action@v4
         with:
           verbose: true

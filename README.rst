@@ -1,3 +1,28 @@
+.. image:: https://github.com/dmayo3/geotz/actions/workflows/ci.yaml/badge.svg
+    :target: https://github.com/dmayo3/mocksafe/actions/workflows/ci.yaml?query=branch%3Amain
+    :alt: Github Actions Status
+.. image:: https://codecov.io/github/dmayo3/geotz/graph/badge.svg?token=A0WO17S0KD 
+ :target: https://codecov.io/github/dmayo3/geotz
+.. image:: https://readthedocs.org/projects/geotz/badge/?version=latest
+    :target: https://geotz.readthedocs.io/en/stable/?badge=latest
+    :alt: Documentation Status
+.. image:: https://badge.fury.io/py/geotz.svg
+    :target: https://badge.fury.io/py/geotz
+    :alt: PyPI Package
+.. image:: https://img.shields.io/pypi/pyversions/geotz.svg
+    :target: https://pypi.org/project/geotz
+    :alt: Supported versions
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+    :target: https://github.com/psf/black
+    :alt: Code style: black
+.. image:: http://www.mypy-lang.org/static/mypy_badge.svg
+    :target: http://mypy-lang.org/
+    :alt: Type checked by mypy
+.. image:: https://img.shields.io/badge/License-CC%20BY%204.0%20%2B%20MIT-yellow
+   :target: https://github.com/dmayo3/geotz/blob/main/LICENSE
+   :alt: License
+
+
 GeoTZ v0.0.2a4
 --------------
 

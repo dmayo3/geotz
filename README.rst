@@ -23,7 +23,7 @@
    :alt: License
 
 
-GeoTZ v0.0.2a4
+GeoTZ v0.0.2b0
 --------------
 
 Docs: https://geotz.readthedocs.io/

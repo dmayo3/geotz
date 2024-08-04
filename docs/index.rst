@@ -1,4 +1,4 @@
-geotz v0.0.2a4
+geotz v0.0.2b0
 ==============
 
 `GitHub repository <https://github.com/dmayo3/geotz>`_

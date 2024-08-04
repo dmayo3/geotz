@@ -29,7 +29,11 @@ GeoTZ v0.0.2a4
 Docs: https://geotz.readthedocs.io/
 
 This is a small library for looking up the timezone for a given country code
-and postal code / postal code prefix.
+and postal code / postal code prefix. The main logic under `geotz` is very
+small indeed, so you can easily read it for yourself.
+
+It's well tested - see the coverage badge above and take a look at the tests
+for all the cases that are covered.
 
 Compared to alternatives like `geopy` or `pgeocode`, it's intended to be
 easier to use, less feature rich, and more lightweight.

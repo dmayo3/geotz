@@ -28,6 +28,8 @@ GeoTZ v0.0.2b0
 
 Docs: https://geotz.readthedocs.io/
 
+Package: https://pypi.org/project/geotz/
+
 This is a small library for looking up the timezone for a given country code
 and postal code / postal code prefix. The main logic under `geotz` is very
 small indeed, so you can easily read it for yourself.
